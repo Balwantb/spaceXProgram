@@ -5,8 +5,9 @@
 
 <main>
   <div class="row">
-    <div class="col-md-3">
-      <div class="card" style="max-width: 18rem;margin-left: 7px;">
+    <div class="col-md-3 col-sm-12">
+      <div class="container">
+      <div class="card mx-auto" style="max-width: 300px">
         <div><strong>Filters</strong></div>
         <div class="card-body">
           <span>Launch Year</span>
@@ -29,22 +30,25 @@
         </div>
       </div>
     </div>
-    <div class="col-md-9 mt-2">
+    </div>
+    <div class="col-md-9 mt-2 col-lg-9">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <ng-container *ngFor="let flightData of allData">
         <div class="col">
-          <div class="card">
-            <div class="imagepath center-block">
+          <div class="container">
+          <div class="card mx-auto">
+            <div class="imagepath mx-auto mt-2">
               <img src="{{flightData.links.mission_patch_small}}" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title" style="color: #2039b5;">{{flightData.mission_name}} #{{flightData.flight_number}}</h5>
               <p class="card-text"><strong>Mission Ids: </strong> {{flightData.mission_id}}</p>
               <p class="card-text"><strong>Launch Year: </strong>{{flightData.launch_year}}</p>
-              <p class="card-text"><strong>SuccessFul Launch: </strong>{{flightData.launch_success}}</p>
-              <p class="card-text"><strong>SuccessFul Landing: </strong>{{flightData.rocket.first_stage.cores[0].land_success}}</p>
+              <p class="card-text"><strong>Successful Launch: </strong>{{flightData.launch_success}}</p>
+              <p class="card-text"><strong>Successful Landing: </strong>{{flightData.rocket.first_stage.cores[0].land_success}}</p>
             </div>
           </div>
+        </div>
         </div>
       </ng-container>
       </div>
