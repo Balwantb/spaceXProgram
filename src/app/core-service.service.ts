@@ -24,16 +24,18 @@ export class CoreServiceService {
       homeUrl = homeUrl + `&launch_year=${year}`;
     }
 
+    //if launch filter is applicable
     if (launch) {
-      const launches = launch === true ? true : false;
-      homeUrl = homeUrl + `&launch_success=${launches}`;
+      launch === true ? true : false;
+      homeUrl = homeUrl + `&launch_success=${launch}`;
     }
 
+    // if landing filter is applicable
     if (land) {
-      const landed = land === true ? true : false;
-      homeUrl = homeUrl + `&land_success=${landed}`;
+      land === true ? true : false;
+      homeUrl = homeUrl + `&land_success=${land}`;
     }
-    // debugger
+
     return this.http.get<any[]>(homeUrl, {
       headers: {
         'Content-Type': 'application/json',

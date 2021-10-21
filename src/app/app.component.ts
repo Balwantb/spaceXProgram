@@ -15,8 +15,8 @@ export class AppComponent implements OnInit {
   imagePath: any;
   fetchByYearURL = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=2014'
   selectedYear: any;
-  selctedLaunchData: boolean = false;
-  selctedLandingData: boolean = false;
+  selctedLaunchData: boolean | undefined;
+  selctedLandingData: boolean | undefined;
   anotherData: any[] | null = [];
   land_successValue: any;
   cores: any;
@@ -44,11 +44,10 @@ export class AppComponent implements OnInit {
   }
 
   clickOnYear() {
-    // debugger
-    this._CoreService.getByYear(this.selectedYear, this.selctedLaunchData, this.selctedLandingData)
+    this._CoreService.getByYear(this.selectedYear, this.selctedLaunchData!, this.selctedLandingData!)
       .subscribe(mr => {
         this.allData = mr.body;
-        console.log(this.allData);
+        // console.log(this.allData);
       });
   }
 
@@ -62,9 +61,10 @@ export class AppComponent implements OnInit {
     this.clickOnYear();
   }
 
-  searchByLandingData(landvl: boolean) {
+  searchByLandingData(landvl: boolean, data: any) {
     this.selctedLandingData = landvl;
     this.clickOnYear();
+    console.log(data);
   }
 }
 

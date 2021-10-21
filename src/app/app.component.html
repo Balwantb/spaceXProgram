@@ -33,7 +33,7 @@
           </div>
           <hr>
           <ng-container *ngFor='let landvl of landingValues'>
-            <button type="button" class="btn btn-success m-3" (click)="searchByLandingData(landvl.value)">{{landvl.text}}</button>
+            <button type="button" class="btn btn-success m-3" (click)="searchByLandingData(landvl.value, $event)">{{landvl.text}}</button>
           </ng-container>
         </div>
         </div>
