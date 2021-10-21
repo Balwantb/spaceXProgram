@@ -13,16 +13,16 @@
           <span>Launch Year</span>
           <hr>
             <ng-container *ngFor='let year of yearValues'>
-            <button type="button" class="btn btn-success m-3" (click)="searchByYear(year.value)">{{year.value}}</button>
+            <button type="button" class="btn btn-success mx-auto" (click)="searchByYear(year.value)">{{year.value}}</button>
             </ng-container>
           <br>
-          <span>Successfull Launch</span>
+          <span>Successful Launch</span>
           <hr>
           <ng-container *ngFor='let launchvl of launchValues'>
             <button type="button" class="btn btn-success m-3" (click)="searchByLaunchData(launchvl.value)">{{launchvl.value}}</button>
           </ng-container>
           <br>
-          <span>Successfull Landing</span>
+          <span>Successful Landing</span>
           <hr>
           <ng-container *ngFor='let landvl of landingValues'>
             <button type="button" class="btn btn-success m-3" (click)="searchByLandingData(landvl.value)">{{landvl.value}}</button>
