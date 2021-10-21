@@ -1,0 +1,14 @@
+.mainview{
+    background-color: #e3e3e3;
+}
+
+.imagepath{
+    background-color: #e3e3e3;
+    width: 250px;
+    margin: 10px 3px 3px 30px;
+}
+
+.footer{
+    display: flex; 
+  justify-content: center;
+}
