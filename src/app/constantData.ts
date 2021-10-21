@@ -52,18 +52,22 @@ export const YEARS_VALUE = [
 
 export const LAUNCH_VALUE = [
     {
+        text: "True",
         value: true
     },
     {
+        text: "False",
         value: false
     }
 ]
 
 export const LANDING_VALUE = [
     {
+        text: "True",
         value: true
     },
     {
+        text: "False",
         value: false
     }
 ]

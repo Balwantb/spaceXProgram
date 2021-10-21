@@ -11,8 +11,6 @@ import { constantData } from './constantData'
 export class AppComponent implements OnInit {
   title = 'spaceXProgram';
   yearValues: any;
-  launchValues: { value: boolean; }[] | undefined;
-  landingValues: { value: boolean; }[] | undefined;
   allData: any[] | null = [];
   imagePath: any;
   fetchByYearURL = 'https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=2014'
@@ -23,6 +21,8 @@ export class AppComponent implements OnInit {
   land_successValue: any;
   cores: any;
   developerName = "Balwant Birajdar";
+  launchValues: { text: string; value: boolean; }[] | undefined;
+  landingValues: { text: string; value: boolean; }[] | undefined;
 
   constructor(private _CoreService: CoreServiceService, private constdata: constantData) { }
 
